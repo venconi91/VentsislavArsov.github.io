@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import Nav from './Nav.js';
-import Home from './Home.js';
+import Header from './../Header';
+import Home from './../Home.js';
+import resetStyles from './resetStyles.css';
+import globalStyles from './globalStyles.css';
 
 class App extends Component {
   constructor(props) {
@@ -9,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Nav></Nav>
+        <Header></Header>
         <Home></Home>
       </div>
     )

@@ -1,0 +1,17 @@
+.nav {
+    text-align: center;
+}
+.menuList {
+    display: inline-block;
+    margin: 0 auto;
+}
+.menuItem {
+    display: inline-block;
+    background-color: cadetblue;
+}
+.menuItem:hover {
+    background-color: darkseagreen;
+}
+.menuItem > a {
+    text-decoration: none;
+}
