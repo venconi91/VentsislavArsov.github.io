@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react'
+import Nav from './Nav.js';
+import Home from './Home.js';
 
 class App extends Component {
   constructor(props) {
@@ -7,7 +9,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        app component
+        <Nav></Nav>
+        <Home></Home>
       </div>
     )
   }
