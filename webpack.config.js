@@ -13,17 +13,20 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     'NODE_ENV': JSON.stringify('production')
+    //   }
+    // }),
+    // new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.optimize.UglifyJsPlugin()
   ],
   module: {
     loaders: [
-      {
-        test: /\.js$/,
-        loaders: [ 'babel' ],
-        exclude: /node_modules/,
-        include: __dirname
-      }
+      { test: /\.js$/, loaders: [ 'babel' ], exclude: /node_modules/, include: __dirname },
+      // { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.css$/, loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]']}
     ]
   }
 }
